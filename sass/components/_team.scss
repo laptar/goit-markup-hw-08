@@ -2,22 +2,28 @@
   background-color: var(--bg-color-second);
 }
 .team__list {
-  display: flex;
   align-items: center;
 }
 .team__item {
-  margin-right: 30px;
-  width: 270px;
+  --items: 1;
+  // margin-right: 30px;
+  // width: 270px;
   text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.team__item:last-child {
-  margin-right: 0;
+  @include mq(tablet) {
+    --items: 2;
+  }
+  @include mq(desktop) {
+    --items: 4;
+  }
 }
 
 .team__info {
   background-color: var(--bg-color-primary);
   padding: 30px 10px;
+  @include mq(notDesktop) {
+    padding-bottom: 24px;
+  }
 }
 .team__person {
   color: var(--title-text-color);

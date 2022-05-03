@@ -1,0 +1,142 @@
+// Mobile-menu
+
+.mob-menu {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include mq(tablet) {
+    display: none;
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color-primary);
+  }
+  &__icon--menu {
+    opacity: 1;
+  }
+  &__btn.is-open .mob-menu__icon--menu {
+    opacity: 0;
+  }
+
+  &__icon--close {
+    opacity: 0;
+  }
+  &__btn.is-open .mob-menu__icon--close {
+    opacity: 1;
+    fill: var(--third-text-color);
+  }
+  // &__btn:hover .mob-menu__icon--close,
+  // &__btn:focus .mob-menu__icon--close {
+  //   fill: var(--brand-color);
+  // }
+}
+// .mob-menu__btn.is-open .mob-menu__icon--menu {
+//   opacity: 0;
+// }
+.menu__modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: var(--bg-color-primary);
+
+  transition: 400ms;
+  &.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  @include mq(tablet) {
+    display: none;
+  }
+}
+.menu__nav {
+  --indent: 30px;
+}
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
+  &--current {
+    color: var(--brand-color);
+  }
+}
+
+.menu__contacts-tel {
+  display: block;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--brand-color);
+}
+.menu__contacts-mail {
+  display: block;
+  margin-bottom: 64px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primay-text-color);
+}
+.menu__social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    min-height: 22px;
+  }
+  &-item:not(:last-child) {
+    position: relative;
+    padding-right: 10px;
+    margin-right: 10px;
+    &:after {
+      content: '';
+      position: absolute;
+      // top: 0;
+      right: 0;
+      margin-left: auto;
+      width: 1px;
+      height: 100%;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+
+  &-link {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22px;
+    letter-spacing: 0.02em;
+    color: var(--brand-color);
+  }
+}

@@ -1,16 +1,17 @@
 .work__section {
+  display: none;
   padding-top: 0;
+  @include mq(desktop) {
+    display: block;
+  }
 }
 
 .work__list {
-  display: flex;
   align-items: center;
 }
 .work__item {
+  --items: 3;
   position: relative;
-}
-.work__item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .work__text {

@@ -3,12 +3,21 @@
 }
 .footer__cotainer {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
+  @include mq(desktop) {
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .footer__contacts {
-  margin-right: 70px;
+  text-align: center;
+  @include mq(desktop) {
+    margin-right: 70px;
+  }
 }
 .footer__logo {
   margin-bottom: 30px;
@@ -37,7 +46,15 @@
 }
 
 .footer__social {
-  margin-right: 93px;
+  text-align: center;
+  @include mq(desktop) {
+    margin-right: 93px;
+  }
+}
+
+.footer__subskribe {
+  text-align: center;
+  @include mq(desktop);
 }
 .footer__title {
   margin-bottom: 20px;
@@ -52,8 +69,11 @@
 }
 
 .subskribe__form {
-  display: flex;
-  align-items: center;
+  text-align: center;
+  @include mq(desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 .subskribe__input {
   width: 358px;

@@ -1,15 +1,20 @@
 .customer__list {
-  display: flex;
   align-items: center;
 }
-.customer__item:not(:last-child) {
-  margin-right: 30px;
+.customer__item {
+  --items: 2;
+  @include mq(tablet) {
+    --items: 3;
+  }
+  @include mq(desktop) {
+    --items: 6;
+  }
 }
 .customer__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  // width: 170px;
   height: 92px;
   fill: #afb1b8;
 
