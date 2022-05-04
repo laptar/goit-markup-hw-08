@@ -32,6 +32,71 @@
             <li class="header__item"><a class="header__link" href="">Контакты</a></li>
           </ul>
         </nav>
+        <div class="mob-menu">
+          <button class="mob-menu__btn" type="button" data-menu-button aria-expanded="false">
+            <svg width="40" height="40">
+              <use class="mob-menu__icon--menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="mob-menu__icon--close" href="./images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="menu__modal" data-menu>
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="./index.html">Студия</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link menu__link--current" href="./portfoio.html">Портфолио</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__contacts">
+            <a class="menu__contacts-tel" href="tel:+380961111111"> +38 096 111 11 11</a>
+            <a class="menu__contacts-mail" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+            <ul class="menu__social">
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="https://www.instagram.com/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="https://twitter.com/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="https://uk-ua.facebook.com/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li class="menu__social-item">
+                <a
+                  class="menu__social-link"
+                  href="https://ua.linkedin.com/"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="header__contacts">
           <a class="header__contacts-link" href="mailto:info@devstudio.com">
             <svg class="header__contacts-icon" width="16" height="12">
@@ -50,7 +115,6 @@
     </header>
     <section class="section">
       <div class="container">
-        <!-- приховати <h1>Портфолио</h1>  -->
         <h1 class="visually-hidden">Портфолио</h1>
         <ul class="filter__list">
           <li class="filter__items">
@@ -69,8 +133,8 @@
             <button class="second-btn" type="button">Маркетинг</button>
           </li>
         </ul>
-        <ul class="projects__list">
-          <li class="projects__items">
+        <ul class="projects__list grid">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -78,7 +142,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-1.jpg" alt="Ноутбук" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-1_des.jpg    1x,
+                      ./images/portfolio/pf-1@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-1_tab.jpg    1x,
+                      ./images/portfolio/pf-1@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-1_mob.jpg    1x,
+                      ./images/portfolio/pf-1@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-1_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Технокряк</h2>
@@ -86,7 +182,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -94,7 +190,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-2.jpg" alt="Баскетболист" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-2_des.jpg    1x,
+                      ./images/portfolio/pf-2@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-2_tab.jpg    1x,
+                      ./images/portfolio/pf-2@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-2_mob.jpg    1x,
+                      ./images/portfolio/pf-2@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-2_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Постер New Orlean vs Golden Star</h2>
@@ -102,7 +230,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -110,7 +238,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-3.jpg" alt="Емблема Риба" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-3_des.jpg    1x,
+                      ./images/portfolio/pf-3@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-3_tab.jpg    1x,
+                      ./images/portfolio/pf-3@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-3_mob.jpg    1x,
+                      ./images/portfolio/pf-3@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-3_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Ресторан Seafood</h2>
@@ -118,7 +278,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -126,7 +286,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-4.jpg" alt="Наушники" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-4_des.jpg    1x,
+                      ./images/portfolio/pf-4@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-4_tab.jpg    1x,
+                      ./images/portfolio/pf-4@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-4_mob.jpg    1x,
+                      ./images/portfolio/pf-4@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-4_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Проект Prime</h2>
@@ -134,7 +326,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -142,7 +334,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-5.jpg" alt="Коробки" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-5_des.jpg    1x,
+                      ./images/portfolio/pf-5@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-5_tab.jpg    1x,
+                      ./images/portfolio/pf-5@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-5_mob.jpg    1x,
+                      ./images/portfolio/pf-5@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-5_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Проект Boxes</h2>
@@ -150,7 +374,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -158,7 +382,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-6.jpg" alt="Монитор" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-6_des.jpg    1x,
+                      ./images/portfolio/pf-6@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-6_tab.jpg    1x,
+                      ./images/portfolio/pf-6@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-6_mob.jpg    1x,
+                      ./images/portfolio/pf-6@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-6_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Inspiration has no Borders</h2>
@@ -166,7 +422,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -174,7 +430,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-7.jpg" alt="Книга" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-7_des.jpg    1x,
+                      ./images/portfolio/pf-7@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-7_tab.jpg    1x,
+                      ./images/portfolio/pf-7@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-7_mob.jpg    1x,
+                      ./images/portfolio/pf-7@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-7_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Издание Limited Edition</h2>
@@ -182,7 +470,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -190,7 +478,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-8.jpg" alt="Бирка" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-8_des.jpg    1x,
+                      ./images/portfolio/pf-8@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-8_tab.jpg    1x,
+                      ./images/portfolio/pf-8@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-8_mob.jpg    1x,
+                      ./images/portfolio/pf-8@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-8_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Проект LAB</h2>
@@ -198,7 +518,7 @@
               </div></a
             >
           </li>
-          <li class="projects__items">
+          <li class="projects__items grid-item">
             <a class="projects__link" href="">
               <div class="projects__picture">
                 <p class="projects__info">
@@ -206,7 +526,39 @@
                   Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img src="images/portfolio/pf-9.jpg" alt="Пеатание на ноутбуке" width="370" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-9_des.jpg    1x,
+                      ./images/portfolio/pf-9@2x_des.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-9_tab.jpg    1x,
+                      ./images/portfolio/pf-9@2x_tab.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpg"
+                  />
+                  <source
+                    srcset="
+                      ./images/portfolio/pf-9_mob.jpg    1x,
+                      ./images/portfolio/pf-9@2x_mob.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/portfolio/pf-9_mob.jpg"
+                    alt="Ноутбук"
+                    width="450"
+                    height="294"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div class="projects__description">
                 <h2 class="project__title">Growing Business</h2>
@@ -292,5 +644,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

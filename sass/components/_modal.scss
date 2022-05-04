@@ -3,7 +3,9 @@
 }
 
 .backdrop {
+  display: flex;
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100vw;
@@ -17,23 +19,25 @@
   pointer-events: none;
 
   & .modal {
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: scale(1.7);
   }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
+  margin: auto;
   padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
+  max-width: 450px;
+  min-height: 609px;
   background-color: var(--bg-color-primary);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 500ms ease;
+  @include mq(desktop) {
+    max-width: 528px;
+    max-height: 581px;
+  }
 
   &__close {
     position: absolute;
@@ -52,6 +56,7 @@
     }
   }
   &__icon {
+    display: inline-block;
     fill: var(--third-text-color);
     transition: var(--animation);
   }

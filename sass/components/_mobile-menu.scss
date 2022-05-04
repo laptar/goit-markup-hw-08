@@ -17,6 +17,12 @@
     align-items: center;
     justify-content: center;
     background-color: var(--bg-color-primary);
+    fill: var(--title-text-color);
+    &:focus,
+    &:hover,
+    &:active {
+      fill: var(--brand-color);
+    }
   }
   &__icon--menu {
     opacity: 1;
@@ -30,18 +36,12 @@
   }
   &__btn.is-open .mob-menu__icon--close {
     opacity: 1;
-    fill: var(--third-text-color);
   }
-  // &__btn:hover .mob-menu__icon--close,
-  // &__btn:focus .mob-menu__icon--close {
-  //   fill: var(--brand-color);
-  // }
 }
-// .mob-menu__btn.is-open .mob-menu__icon--menu {
-//   opacity: 0;
-// }
+
 .menu__modal {
   position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

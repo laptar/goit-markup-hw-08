@@ -10,8 +10,37 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  /*
+  ========================================
+  | Медіа-правила із застосуванням міксіну
+  ========================================
+  */
+  // For mobile backgroud + 2x
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/main/bg-img_mob.jpg);
+  @include mq(retina) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/main/bg-img@2x_mob.jpg);
+  }
+  // For tablet backgroud + 2x
+  @include mq(tablet) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/main/bg-img_tab.jpg);
+    @include mq(retina) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/main/bg-img@2x_tab.jpg);
+    }
+  }
+  // For desktop backgroud + 2x
   @include mq(desktop) {
     height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/main/bg-img_des.jpg);
+    @include mq(retina) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/main/bg-img@2x_des.jpg);
+    }
   }
 }
 
