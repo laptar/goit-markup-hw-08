@@ -1,6 +1,7 @@
 .features__list {
 }
 .features__item {
+  align-items: center;
   --items: 1;
   @include mq(tablet) {
     --items: 2;
@@ -22,6 +23,10 @@
   border-radius: 4px;
 }
 .features__title {
+  @include mq(mobile-only) {
+    display: flex;
+    justify-content: center;
+  }
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;

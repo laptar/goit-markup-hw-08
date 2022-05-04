@@ -66,8 +66,11 @@
     display: none;
   }
 }
+.menu_a {
+  width: 480px;
+}
 .menu__nav {
-  --indent: 30px;
+  max-width: 480px;
 }
 .menu__item:not(:last-child) {
   margin-bottom: 32px;
@@ -91,7 +94,7 @@
   display: block;
   margin-bottom: 32px;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 26px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--brand-color);
@@ -117,8 +120,8 @@
   }
   &-item:not(:last-child) {
     position: relative;
-    padding-right: 10px;
-    margin-right: 10px;
+    padding-right: 6px;
+    margin-right: 6px;
     &:after {
       content: '';
       position: absolute;
@@ -134,7 +137,7 @@
   &-link {
     display: block;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.22px;
     letter-spacing: 0.02em;
     color: var(--brand-color);

@@ -1,9 +1,10 @@
 .header {
+  position: relative;
+
   border-bottom: 1px solid #ececec;
 }
 
 .header__container {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,6 +97,7 @@
   transition: color var(--animation), fill var(--animation);
   @include mq(desktop) {
     margin-right: 50px;
+    margin-bottom: 0;
   }
 }
 .header__contacts-link:hover,

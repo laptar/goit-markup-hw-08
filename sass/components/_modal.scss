@@ -5,6 +5,8 @@
 .backdrop {
   display: flex;
   position: fixed;
+  overflow-y: scroll;
+
   z-index: 1000;
   top: 0;
   left: 0;
@@ -25,6 +27,7 @@
 
 .modal {
   position: relative;
+  overflow-y: scroll;
   margin: auto;
   padding: 40px;
   max-width: 450px;

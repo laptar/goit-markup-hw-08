@@ -1,6 +1,7 @@
 .projects__list {
 }
 .projects__items {
+  display: flex;
   --items: 1;
   @include mq(tablet) {
     --items: 2;
@@ -11,7 +12,8 @@
 }
 
 .projects__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   transition: box-shadow var(--animation);
 
@@ -29,12 +31,15 @@
 
 .projects__info {
   position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
   top: 0;
   left: 0;
   transform: translateY(100%);
-  padding: 77px 24px;
+  padding: 0px 24px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 28px;
   color: var(--second-text-color);
   background-color: rgba(33, 150, 243, 0.9);
@@ -55,6 +60,7 @@
 }
 
 .projects__description {
+  flex-grow: 1;
   border: 1px solid #eeeeee;
   border-top: none;
   padding: 20px 24px;
