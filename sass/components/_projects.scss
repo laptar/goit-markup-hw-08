@@ -39,18 +39,14 @@
   transform: translateY(100%);
   padding: 0px 24px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 28px;
   color: var(--second-text-color);
   background-color: rgba(33, 150, 243, 0.9);
 
   transition: transform var(--animation);
-  @include mq(tablet) {
-    padding-top: 49px;
-  }
-  @include mq(desktop) {
-    padding-top: 63px;
-    padding-bottom: 63px;
+  @include mq(mobile-small) {
+    font-size: 14px;
   }
 
   .projects__link:hover &,

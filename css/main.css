@@ -363,10 +363,16 @@ svg {
   display: block;
   margin-bottom: 32px;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--brand-color);
+}
+
+@media screen and (max-width: 479.98px) {
+  .menu__contacts-tel {
+    font-size: 26px;
+  }
 }
 
 .menu__contacts-mail {
@@ -393,8 +399,15 @@ svg {
 
 .menu__social-item:not(:last-child) {
   position: relative;
-  padding-right: 6px;
-  margin-right: 6px;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 479.98px) {
+  .menu__social-item:not(:last-child) {
+    padding-right: 6px;
+    margin-right: 6px;
+  }
 }
 
 .menu__social-item:not(:last-child):after {
@@ -410,10 +423,16 @@ svg {
 .menu__social-link {
   display: block;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.22px;
   letter-spacing: 0.02em;
   color: var(--brand-color);
+}
+
+@media screen and (max-width: 479.98px) {
+  .menu__social-link {
+    font-size: 12px;
+  }
 }
 
 .hero {
@@ -1100,23 +1119,16 @@ svg {
   transform: translateY(100%);
   padding: 0px 24px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 28px;
   color: var(--second-text-color);
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform var(--animation);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 479.98px) {
   .projects__info {
-    padding-top: 49px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .projects__info {
-    padding-top: 63px;
-    padding-bottom: 63px;
+    font-size: 14px;
   }
 }
 

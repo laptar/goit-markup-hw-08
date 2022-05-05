@@ -95,10 +95,13 @@
   display: block;
   margin-bottom: 32px;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 34px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--brand-color);
+  @include mq(mobile-small) {
+    font-size: 26px;
+  }
 }
 .menu__contacts-mail {
   display: block;
@@ -121,8 +124,12 @@
   }
   &-item:not(:last-child) {
     position: relative;
-    padding-right: 6px;
-    margin-right: 6px;
+    padding-right: 10px;
+    margin-right: 10px;
+    @include mq(mobile-small) {
+      padding-right: 6px;
+      margin-right: 6px;
+    }
     &:after {
       content: '';
       position: absolute;
@@ -138,9 +145,12 @@
   &-link {
     display: block;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.22px;
     letter-spacing: 0.02em;
     color: var(--brand-color);
+    @include mq(mobile-small) {
+      font-size: 12px;
+    }
   }
 }
