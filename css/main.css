@@ -391,37 +391,33 @@ svg {
   flex-wrap: wrap;
 }
 
-.menu__social-item {
-  display: flex;
-  align-items: center;
-  min-height: 22px;
-}
-
 .menu__social-item:not(:last-child) {
-  position: relative;
-  padding-right: 10px;
   margin-right: 10px;
 }
 
 @media screen and (max-width: 479.98px) {
   .menu__social-item:not(:last-child) {
-    padding-right: 6px;
-    margin-right: 6px;
+    margin-right: 5px;
   }
 }
 
 .menu__social-item:not(:last-child):after {
   content: '';
-  position: absolute;
-  right: 0;
-  margin-left: auto;
-  width: 1px;
+  margin-left: 10px;
+  width: 2px;
+  height: 22px;
   height: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
+@media screen and (max-width: 479.98px) {
+  .menu__social-item:not(:last-child):after {
+    height: 16px;
+    margin-left: 5px;
+  }
+}
+
 .menu__social-link {
-  display: block;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22px;
