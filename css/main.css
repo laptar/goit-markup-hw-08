@@ -1033,6 +1033,7 @@ svg {
 }
 
 .callback__icon-policy {
+  flex-shrink: 0;
   width: 16px;
   height: 15px;
   margin-right: 8px;
