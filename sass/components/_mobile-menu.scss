@@ -117,8 +117,6 @@
   align-items: center;
   flex-wrap: wrap;
 
-  &-item {
-  }
   &-item:not(:last-child) {
     margin-right: 10px;
     @include mq(mobile-small) {
